@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grocery {
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #333;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grocery .container {
+    width: 500px;
+    min-height: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 2px 5px 30px rgba(255, 255, 255, .2);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.grocery .container:hover {
+    box-shadow: 2px 5px 40px rgba(255, 255, 255, .1);
 }
-
-.App-link {
-  color: #61dafb;
+.grocery .container .alert {
+    padding: 3px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    transition: .5s;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grocery .container .alert.danger {
+    background-color: #e91e63d4;
+}
+.grocery .container .alert.success {
+    background-color: #4CAF50;
+}
+.grocery .container .title {
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 25px;
+}
+.grocery .container form {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.grocery .container form input[type="text"] {
+    padding: 15px;
+    background-color: #ddd;
+    border: none;
+    flex-grow: 1;
+    font-family: cursive;
+    font-size: 18px;
+}
+.grocery .container form input[type="text"]:focus {
+    outline: none;
+}
+.grocery .container form button[type="submit"] {
+    padding: 15px;
+    background-color: #0000ffc7;
+    color: white;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+.grocery .container form button[type="submit"]:hover {
+    background-color: blue;
+}
+.grocery .container .list {
+    margin: 20px 0;
+}
+.grocery .container .list .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: .5s;
+}
+.grocery .container .list .list-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+.grocery .container .list button {
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.grocery .container .list .icons i {
+    color: white;
+    font-weight: bold;
+}
+.grocery .container .list .icons button:first-child {
+    background-color: #ff0000b5;
+    margin-right: 5px;
+}
+.grocery .container .list .icons button:last-child {
+    background-color: #2196f3d1;
+}
+.grocery .container .list .icons button:first-child:hover {
+    background-color: red;
+}
+.grocery .container .list .icons button:last-child:hover {
+    background-color: #2196f3;
+}
+.grocery .container .clear-btn {
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    background-color: #ff0000cf;
+    padding: 10px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .5s;
+}
+.grocery .container .clear-btn:hover {
+    background-color: red;
 }
